@@ -1,4 +1,4 @@
-name := "filetest"
+name := "play_filetest"
 
 version := "1.0"
 
