@@ -1,0 +1,255 @@
+/**
+ |--------------------------------------
+ | All APP specific CSS goes in here.
+ |
+ | @Version: 1.0
+ | @Author: iKreativ
+ | @URL: http://ikreativ.com
+ |--------------------------------------
+ */
+
+/**
+ * Defaults
+ */
+html,
+body 
+{
+    width: 100%;
+    color: #222222;
+}
+
+blockquote 
+{
+	color: #B4C4D0;
+}
+
+a
+{
+	color: #60bfb1;
+	text-decoration: underline;
+}
+
+a:hover,
+a:visited:hover 
+{
+	color: #222222;
+}
+
+a:active 
+{
+	color: #000000;
+}
+
+h2, h3, h4, h5, h6 
+{
+    font-weight: 400;
+}
+/**
+ * Section
+ */
+.section 
+{
+	width: 100%;
+	padding: 150px 0 100px 0;
+	float: left;
+}
+/**
+ * Primary Navigation
+ */
+.workless
+{
+	float: left;
+	margin-right: 15px;
+	padding-right: 25px;
+	border-right: 1px solid rgba( 255, 255, 255, 0.1 );
+}
+
+.workless,
+.workless i
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+nav#primary 
+{
+    background: #32353a;
+    width: 100%;
+    padding: 15px 0;
+    position: fixed;
+    z-index: 999;
+    float: left;
+}
+
+nav#primary ul 
+{
+	float: left;
+}
+
+nav#primary ul li 
+{
+	margin-left: 25px;
+	display: inline;
+}
+
+nav#primary ul li a 
+{
+	font-size: 14px;
+	font-weight: 400;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav#primary ul li a:hover 
+{
+    color: rgba( 255, 255, 255, 0.5 );
+}
+/**
+ * Header
+ */
+#header 
+{
+	background: #60bfb1;
+	width: 100%;
+	padding: 150px 0 50px 0;
+    float: left;
+}
+
+#header h2
+{
+	color: #ffffff;
+	text-shadow: 0 2px 0 rgba( 0, 0, 0, 0.03 );
+}
+
+#header a.button
+{
+	background: #262626;
+	background: rgba( 0, 0, 0, 0.2 );
+}
+
+#header a:hover.button
+{
+    background: #ffffff;
+    color: #111111!important;
+}
+/**
+ * Icon styles for demo
+ */
+ul.icons li 
+{
+    width: 100px;
+    height: 100px;
+    background: #f9f9f9;
+    padding: 25px 15px 15px 15px;
+    margin: 1px;
+    font-size: 11px;
+    text-align: center;
+    float: left;
+    border-radius: 2px;
+    -webkit-transition: 250ms linear all;
+    -moz-transition: 250ms linear all;
+    transition: 250ms linear all;
+}
+
+ul.icons li:hover 
+{
+    background: #60bfb1;
+    color: #ffffff;
+}
+
+ul.icons li i 
+{
+    font-size: 14px!important;
+    margin-bottom: 5px;
+    display: block;
+}
+/**
+ * Aside & Toggle
+ */
+a.aside-open
+{
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+
+a.aside-open i
+{
+	color: #ffffff;
+}
+
+#main,
+#aside
+{
+	-webkit-transition: 150ms linear all;
+	-moz-transition: 150ms linear all;
+	transition: 150ms linear all; 
+}
+
+#aside
+{
+	overflow-y: scroll;
+    position: fixed;
+    right: -400px;
+    top: 0;
+    bottom: 0;
+    z-index: 9995;
+    background: #25282c;
+}
+
+#aside::-webkit-scrollbar
+{
+	background: #262626!important;
+	color: #262626!important;
+}
+
+#aside::-webkit-scrollbar-thumb
+{
+	background: #262626!important;
+	color: #262626!important;
+}
+
+#aside.toggled
+{
+	right: 0;
+}
+
+#aside li
+{
+	display: block;
+}
+
+#aside li a
+{
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+
+#aside li a:hover 
+{
+    color: rgba( 255, 255, 255, 0.5 );
+}
+/**
+ * Footer
+ */
+footer#footer 
+{
+    color: #666666;
+    font-size: 14px;
+    border-top: 1px solid #eeeeee;
+    width: 100%;
+	padding: 100px;
+	float: left;
+}
+
+#sharing 
+{
+    margin-bottom: 25px;
+}
+
+#sharing li 
+{
+    display: inline;
+}

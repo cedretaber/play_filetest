@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Test</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins.js"></script>
+</head>
+<body>
+<div class="bg-birds">
+    <div class="padding-left one-fifth"></div>
+    <div class="container three-fifth">
+        <h1>File Test</h1>
+        <form>
+            <p>
+                ファイル1
+                <input type="file" id="file1" />
+            </p>
+            <p>
+                ファイル2
+                <input type="file" id="file2" />
+            </p>
+            <p><button type="button" class="button" onclick="clicktest()">送信</button></p>
+        </form>
+    </div>
+</div>
+<script>
+const multiPartHeaders = new Headers({
+  'Accept': 'application/json',
+  'X-Requested-With': 'XMLHttpRequest'
+});
+
+function clicktest() {
+  const formData = new FormData();
+
+  formData.append("files", document.getElementById('file1').files[0]);
+  formData.append("files", document.getElementById('file2').files[0]);
+  formData.append("json", JSON.stringify({ foo: "bar", hoge: "fuga" }));
+
+  fetch("/file", {
+    method: "POST",
+    headers: multiPartHeaders,
+    body: formData
+  }).then((res) => {
+    return res.json();
+  }).then((text) => {
+    console.log(text);
+  });
+  return false;
+}
+</script>
+</body>
+</html>
